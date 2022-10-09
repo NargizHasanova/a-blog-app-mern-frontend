@@ -46,7 +46,7 @@ export const AddPost = () => {
       const formData = new FormData()
       const file = e.target.files[0]
       formData.append('file', file) // burdaki 'file' yazisiyla backenddeki 'file' yazisi eyni olmalidi
-      const { data } = await Axios.post('upload', formData)
+      const { data } = await Axios.post('/upload', formData)
       setImageUrl(data.url)
     } catch (err) {
       console.warn(err)
